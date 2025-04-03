@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import logo from './Ashish Logo.jpg'; // Update this path
+import Ashish from './Ashish.jpg'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,17 +27,18 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
-          <img 
-            src={logo} 
-            alt="Portfolio Logo" 
-            className="logo-img"
-          />
+        <img
+          src={Ashish} // Replace with actual profile image
+          alt="Profile"
+          className="profile-img"
+        />
+          <span className="logo-text">Ashish</span>
         </a>
         
-        <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <div className="menu-icon" onClick={toggleMenu}>
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`}></span>
         </div>
         
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -45,10 +46,13 @@ const Navbar = () => {
             <a href="#home" className="nav-links" onClick={toggleMenu}>Home</a>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-links" onClick={toggleMenu}>About</a>
+            <a href="#about" className="nav-links" onClick={toggleMenu}>About Me</a>
           </li>
           <li className="nav-item">
-            <a href="#projects" className="nav-links" onClick={toggleMenu}>Projects</a>
+            <a href="#projects" className="nav-links" onClick={toggleMenu}>Designs</a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact" className="nav-links" onClick={toggleMenu}>Services</a>
           </li>
           <li className="nav-item">
             <a href="#contact" className="nav-links" onClick={toggleMenu}>Contact</a>

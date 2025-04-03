@@ -1,30 +1,21 @@
 import React from 'react';
+import './Home.css'
 
-// import Header from '../components/Header/Header';
 import SectionA from '../components/Homecomps/SectionA';
 import Header from '../components/Navbar/Header'
-// import HomeB from '../components/Homecomps/HomeB';
-// import HomeC from '../components/Homecomps/HomeC';
-// import Whychooseus from '../components/Homecomps/Whychooseus';
-// import Testimonials from '../components/Homecomps/Testimonials';
-// import Contact from '../components/Homecomps/Contact';
-// import Footer from '../components/Footer/Footer';
-
 
 export const Home = () => {
+  const gradientStyle = {
+    background: 'linear-gradient(to bottom, #054761 0%, #00131A 30%, #000D14 60%, #000000 100%)',
+    minHeight: '100vh',
+    width: '100%',
+    color: 'white'
+  };
 
   return (
-    <div>
-        
-          <Header />
-        <SectionA />
-        {/* <Header />
-        <div ><HomeB /></div>
-        <div ><HomeC /></div>
-        <div ><Whychooseus /></div>
-        <div ><Testimonials /></div>
-        <div ><Contact /></div>
-        <Footer /> */}
-        </div>
+    <div className='mainroot' style={gradientStyle}>
+      <Header />
+      <SectionA />
+    </div>
   );
 };
