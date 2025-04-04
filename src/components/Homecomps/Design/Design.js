@@ -1,6 +1,8 @@
 import React from 'react';
 import './Design.css';
 import DesignB from './DesignB'
+import FeaturedWebsites from '../Websites/Websites';
+import DesignC from './DesignC'
 
 const ServiceCards = () => {
   const services = [
@@ -11,7 +13,8 @@ const ServiceCards = () => {
         </svg>
       ),
       title: 'Web Design',
-      projects: '270 Projects'
+      projects: '270 Projects',
+      link:''
     },
     {
       icon: (
@@ -75,6 +78,9 @@ const ServiceCards = () => {
       ))}
 
       <DesignB/>
+      <FeaturedWebsites/>
+      <DesignC/>
+
     </div>
   );
 };
