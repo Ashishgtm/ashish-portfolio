@@ -7,7 +7,7 @@ import DesignPage from '../components/Homecomps/Design/Design';
 
 export const Home = () => {
   const gradientStyle = {
-    background: 'linear-gradient(to bottom, #054761 0%, #00131A 30%, #000D14 60%, #000000 100%)',
+    background: 'linear-gradient(to bottom, #054761 -10%, #00131A 18%, #000D14 50%, #000000 100%)',
     minHeight: '100vh',
     width: '100%',
     color: 'white'

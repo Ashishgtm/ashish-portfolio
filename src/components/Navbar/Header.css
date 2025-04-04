@@ -12,11 +12,12 @@
 }
 
 .navbar-container {
-  background: radial-gradient(circle, 
-    #054761 0%, 
-    #00131A 30%, 
-    #000D14 60%, 
-    #000000 100%);
+  /* Semi-transparent background with blur */
+  background: rgba(5, 71, 97, 0.2); /* Fallback color matching your gradient */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  
+  /* Original styles */
   color: rgba(255, 255, 255, 0.658);
   border-radius: 20px;
   display: flex;
@@ -28,6 +29,15 @@
   padding: 0 24px;
   margin: 1% auto 0;
   border: 2px solid rgba(238, 234, 234, 0.658);
+  
+  /* Optional: Gradient overlay for better readability */
+  background: 
+    radial-gradient(circle, 
+      rgba(5, 71, 97, 0.2) 0%, 
+      rgba(0, 19, 26, 0.2) 30%, 
+      rgba(0, 13, 20, 0.2) 60%, 
+      rgba(0, 0, 0, 0.2) 100%),
+    rgba(5, 71, 97, 0.15); /* Layered transparency */
 }
 
 .navbar-logo {
