@@ -38,9 +38,52 @@
     letter-spacing: 0.2em;
     font-family: "Sacramento", cursive;
     font-style: normal;
+    color: rgba(221, 193, 32, 0.822);
 
 
   }
+  /* Scroll down animation */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.scroll-down-icon {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.scroll-down-icon::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}
+
+
   
   /* ========== RESPONSIVE ADDITIONS ONLY ========== */
 
@@ -66,10 +109,13 @@
   /* Tablet portrait (768px to 991px) */
   @media screen and (max-width: 991px) {
     .portfolio-header {
+      padding-top: 55%;
+    }
+    .portfolio-header {
       padding-top: 18%;
     }
     .portfolio-title {
-      font-size: 10rem;
+      font-size: 6rem;
     }
     .name-text {
       font-size: 1.6rem;
@@ -79,10 +125,10 @@
   /* Large phones (576px to 767px) */
   @media screen and (max-width: 767px) {
     .portfolio-header {
-      padding-top: 25%;
+      padding-top: 55%;
     }
     .portfolio-title {
-      font-size: 10rem;
+      font-size: 6rem;
     }
     .design-text {
       font-size: 0.7rem;
@@ -91,17 +137,21 @@
     .name-text {
       font-size: 1.4rem;
     }
+    .scroll-down-icon {
+      width: 25px;
+      height: 40px;
+    }
   }
   
   /* Small phones (up to 575px) */
   @media screen and (max-width: 575px) {
     .portfolio-header {
-      padding-top: 30%;
+      padding-top: 85%;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     }
     .portfolio-title {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 0.3rem 0;
     }
     .design-text {
@@ -112,17 +162,23 @@
       font-size: 1.2rem;
       letter-spacing: 0.15em;
     }
+    .scroll-down {
+      bottom: 20px;
+    }
   }
   
   /* Very small phones (up to 400px) */
   @media screen and (max-width: 400px) {
     .portfolio-header {
-      padding-top: 45%;
+      padding-top: 75%;
     }
     .portfolio-title {
-      font-size: 3.2rem;
+      font-size: 5.2rem;
     }
     .name-text {
       font-size: 1rem;
+    }
+    .scroll-down {
+      bottom: 20px;
     }
   }
