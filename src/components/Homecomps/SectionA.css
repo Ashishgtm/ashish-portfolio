@@ -40,8 +40,16 @@
     font-family: "Sacramento", cursive;
     font-style: normal;
     color: rgba(221, 193, 32, 0.822);
-
-
+    position: relative;
+  }
+  .cursor {
+    animation: blink 0.7s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
   /* Scroll down animation */
 .scroll-down {
