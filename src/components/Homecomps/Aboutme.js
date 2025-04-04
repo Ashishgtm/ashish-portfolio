@@ -18,10 +18,10 @@ const AboutMe = () => {
         <p className="connect-text">Want to know more about me !</p>
         <div className="connect-buttons">
           <a href="#contact" className="connect-button">
-            Let's Connect
+          Linkedin
           </a>
           <a href="#blog" className="connect-button">
-            Blog
+            Github
           </a>
         </div>
       </div>
