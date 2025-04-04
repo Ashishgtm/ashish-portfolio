@@ -11,7 +11,7 @@ const ServiceCards = () => {
         </svg>
       ),
       title: 'Web Design',
-      projects: '120 Projects'
+      projects: '270 Projects'
     },
     {
       icon: (
@@ -28,7 +28,7 @@ const ServiceCards = () => {
         </svg>
       ),
       title: 'Ui/Ux Design',
-      projects: '241 Projects'
+      projects: '114 Projects'
     },
     {
       icon: (
@@ -45,7 +45,7 @@ const ServiceCards = () => {
         </svg>
       ),
       title: 'Web Research',
-      projects: '240 Projects'
+      projects: '40 Projects'
     },
     {
       icon: (
@@ -55,7 +55,7 @@ const ServiceCards = () => {
         </svg>
       ),
       title: 'Marketing',
-      projects: '331 Prodect'
+      projects: '200 Product'
     }
   ];
 

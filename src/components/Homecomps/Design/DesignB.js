@@ -62,32 +62,32 @@ const StatsSection = () => {
   return (
     <div className="stats-container">
       <div className="stats-experience-card">
-        <div className="stats-number" ref={experienceRef} data-target="18">0</div>
+        <div className="stats-number" ref={experienceRef} data-target="5">0</div>
         <div className="stats-title">Years Of Experience</div>
         <p className="stats-description">
-          Business consulting consultants provide expert advice and guide the
-          businesses to help theme their performance efficiency
+        We architect digital experiences that blend aesthetic mastery with strategic functionality, 
+        crafting websites that perform as powerfully as they impress.
         </p>
       </div>
 
       <div className="stats-metrics-container">
         <div className="stats-metric-card">
-          <div className="metric-value" ref={projectRef} data-target="14000">0</div>
+          <div className="metric-value" ref={projectRef} data-target="500">0</div>
           <div className="metric-label">Our Project Complete</div>
         </div>
 
         <div className="stats-metric-card">
-          <div className="metric-value" ref={productRef} data-target="7000">0</div>
+          <div className="metric-value" ref={productRef} data-target="120">0</div>
           <div className="metric-label">Our Natural Products</div>
         </div>
 
         <div className="stats-metric-card">
-          <div className="metric-value" ref={reviewRef} data-target="145">0</div>
+          <div className="metric-value" ref={reviewRef} data-target="95">0</div>
           <div className="metric-label">Clients Reviews</div>
         </div>
 
         <div className="stats-metric-card">
-          <div className="metric-value" ref={clientRef} data-target="1726">0</div>
+          <div className="metric-value" ref={clientRef} data-target="226">0</div>
           <div className="metric-label">Our Satisfied Clients</div>
         </div>
       </div>

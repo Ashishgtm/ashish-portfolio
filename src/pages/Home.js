@@ -32,17 +32,13 @@ export const Home = () => {
         <DesignPage />
       </section>
       
-      {/* Services Section - Add your services component here */}
-      <section id="services" style={{ padding: '4rem 0' }}>
+      {/* <section id="services" style={{ padding: '4rem 0' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>My Services</h2>
-        {/* Add your services content here */}
       </section>
       
-      {/* Contact Section - Add your contact component here */}
       <section id="contact" style={{ padding: '4rem 0' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Contact Me</h2>
-        {/* Add your contact form/content here */}
-      </section>
+      </section> */}
     </div>
   );
 };
