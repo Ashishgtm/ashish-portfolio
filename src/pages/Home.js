@@ -3,6 +3,8 @@ import './Home.css'
 
 import SectionA from '../components/Homecomps/SectionA';
 import Header from '../components/Navbar/Header'
+import Aboutme from '../components/Homecomps/Aboutme';
+import DesignPage from '../components/Homecomps/Design/Design';
 
 export const Home = () => {
   const gradientStyle = {
@@ -16,6 +18,8 @@ export const Home = () => {
     <div className='mainroot' style={gradientStyle}>
       <Header />
       <SectionA />
+      <Aboutme/>
+      <DesignPage/>
     </div>
   );
 };

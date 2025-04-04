@@ -10,6 +10,7 @@
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 15%;
+    height: 60vh;
   }
   
   .design-text {
@@ -111,9 +112,7 @@
     .portfolio-header {
       padding-top: 55%;
     }
-    .portfolio-header {
-      padding-top: 18%;
-    }
+  
     .portfolio-title {
       font-size: 6rem;
     }
@@ -140,15 +139,18 @@
     .scroll-down-icon {
       width: 25px;
       height: 40px;
+      
+
     }
   }
   
   /* Small phones (up to 575px) */
   @media screen and (max-width: 575px) {
     .portfolio-header {
-      padding-top: 85%;
+      padding-top: 105%;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
+      height: 50vh;
     }
     .portfolio-title {
       font-size: 5.2rem;
@@ -163,7 +165,9 @@
       letter-spacing: 0.15em;
     }
     .scroll-down {
-      bottom: 20px;
+     display: none;
+      
+
     }
   }
   
@@ -179,6 +183,7 @@
       font-size: 1rem;
     }
     .scroll-down {
-      bottom: 20px;
+      display: none;
+
     }
   }

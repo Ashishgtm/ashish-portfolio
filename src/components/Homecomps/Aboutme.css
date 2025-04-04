@@ -1,0 +1,109 @@
+.about-me-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.about-me-content {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.about-me-content h1 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #054761;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.about-me-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    color: #838181;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.about-me-content p {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    color: #949494;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.connect-text {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: clamp(0.9rem, 1.3vw, 1rem);
+}
+
+.connect-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.connect-button {
+    padding: 0.6rem 1.2rem;
+    background-color: #333;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.connect-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Media Queries for specific adjustments */
+@media (max-width: 768px) {
+    .about-me-content {
+        padding: 1.5rem;
+    }
+    
+    .connect-buttons {
+        gap: 0.8rem;
+    }
+    
+    .connect-button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me-content {
+        padding: 1rem;
+    }
+    
+    .about-me-content h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .connect-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .connect-button {
+        width: 80%;
+        padding: 0.6rem;
+    }
+}
