@@ -233,6 +233,11 @@
     .info-cards {
       gap: 2rem;
     }
+    .contactclass{
+      margin-top: -2%;
+      font-size: 18px;
+
+    }
     
     .info-card {
       padding: 2rem 1.5rem;
@@ -269,6 +274,10 @@
       padding: 1.5rem 1rem;
       margin-top: -45%;
 
+    }
+    .contactclass{
+      margin-top: -2%;
+      font-size: 18px;
     }
     
     .info-card {

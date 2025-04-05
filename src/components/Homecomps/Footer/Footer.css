@@ -1,0 +1,301 @@
+/* Footer.css */
+.footer {
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 2rem 0 0 0;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-logo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .footer-name {
+    margin-top: 35%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    font-family: "Sacramento", cursive;
+    font-style: normal;
+    color: rgba(221, 193, 32, 0.822);
+    position: relative;
+  }
+  
+  .footer-tagline {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  .cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-transform: none;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+   
+  }
+  
+  .footer-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  .footer-link:hover {
+    color: var(--text-color);
+  }
+  
+  .footer-link:hover::before {
+    width: 100%;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-info a {
+    color: #ccc;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .contact-info a:hover {
+    color: var(--text-color);
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+    display: inline-block;
+    color: var(--primary-color);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-link {
+    color: #ccc;
+    transition: var(--transition);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(5, 71, 97, 0.2);
+  }
+  
+  .social-link:hover {
+    color: var(--text-color);
+    background: var(--primary-color);
+    transform: translateY(-3px);
+  }
+  
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: #ccc;
+  }
+  /* Additional responsive styles for various devices */
+
+/* Medium-sized tablets (landscape) */
+@media screen and (max-width: 1024px) {
+    .footer-container {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  /* Small tablets and large phones (landscape) */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .footer-section {
+      margin-bottom: 1.5rem;
+      min-width: 100%;
+    }
+    
+    .footer-name {
+      margin-top: 0;
+    }
+  }
+  
+  /* Medium-sized phones */
+  @media screen and (max-width: 576px) {
+    .footer {
+      padding: 1.5rem 0 0 0;
+    }
+    
+    .footer-container {
+      padding: 0 1rem;
+    }
+    
+    .footer-section {
+      text-align: center;
+    }
+    
+    .footer-section h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .contact-info p {
+      justify-content: center;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+  }
+  
+  /* Small phones */
+  @media screen and (max-width: 480px) {
+    /* Smaller text for small screens */
+    .footer-logo h2 {
+      font-size: 1.5rem;
+    }
+    
+    .footer-tagline {
+      font-size: 0.8rem;
+    }
+    
+    .footer-section h3 {
+      font-size: 1rem;
+    }
+    
+    .footer-link {
+      font-size: 0.85rem;
+    }
+    
+    .social-links {
+      gap: 0.8rem;
+    }
+  }
+  
+  /* Extra small phones - special layout */
+  @media screen and (max-width: 380px) {
+    /* Center the logo section at the top */
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    /* Make the footer name centered */
+    .footer-name {
+      margin-top: 0;
+      text-align: center;
+    }
+    
+    /* Combine Navigation and Portfolio into one row */
+    .footer-section:nth-child(2),
+    .footer-section:nth-child(3) {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      min-width: initial;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    
+    /* Make Footer sections for Nav + Portfolio container */
+    .footer-container::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Fix contact section to ensure it appears below */
+    .footer-section:nth-child(4) {
+      clear: both;
+      padding-top: 1rem;
+    }
+    
+    /* Adjust nav links to be more compact */
+    .footer-nav ul li {
+      margin-bottom: 0.6rem;
+    }
+  }

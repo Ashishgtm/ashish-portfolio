@@ -17,10 +17,10 @@ const AboutMe = () => {
         </p>
         <p className="connect-text">Want to know more about me !</p>
         <div className="connect-buttons">
-          <a href="#contact" className="connect-button">
-          Linkedin
-          </a>
-          <a href="#blog" className="connect-button">
+        <a href="https://www.linkedin.com/in/ashishgautam7/" className="connect-button" target="_blank" rel="noopener noreferrer">
+  LinkedIn
+</a>
+          <a href="https://github.com/Ashishgtm" className="connect-button" target="_blank" rel="noopener noreferrer">
             Github
           </a>
           <a href="/Professional Resume CV Aashish Gautam.pdf" className="connect-button" download>
