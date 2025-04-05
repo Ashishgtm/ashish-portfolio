@@ -23,6 +23,10 @@ const AboutMe = () => {
           <a href="#blog" className="connect-button">
             Github
           </a>
+          <a href="/Ashish Gautam Professional Resume CV.pdf" className="connect-button" download>
+  Download CV
+</a>
+
         </div>
       </div>
     </section>
