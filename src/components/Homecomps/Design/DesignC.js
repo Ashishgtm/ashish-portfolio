@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DesignC.css";
-
+import Pricing from '../Pricing/Pricing'
 const ServicesGrid = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const servicesdesign = [
     {
       id: "01",
@@ -64,13 +66,14 @@ const ServicesGrid = () => {
         "I build PWAs with offline capabilities, push notifications, and app-like experiences that boost engagement and conversion rates.",
     },
   ];
+  const displayedServices = showAll ? servicesdesign : servicesdesign.slice(0, 6);
 
   return (
     <div className="design-container">
-      <h2>Services</h2>
+      <h3>Services</h3>
 
       <div className="design-grid">
-        {servicesdesign.map((service) => (
+        {displayedServices.map((service) => (
           <div key={service.id} className="design-card">
             <div className="designcard-header">
               <span className="designcard-number">{service.id}.</span>
@@ -80,7 +83,18 @@ const ServicesGrid = () => {
           </div>
         ))}
       </div>
+
+      {servicesdesign.length > 6 && (
+        <button 
+          className="show-more-button" 
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? 'Show Less' : 'Show More'}
+        </button>
+      )}
+      <Pricing/>
     </div>
+    
   );
 };
 

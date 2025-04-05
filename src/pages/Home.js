@@ -4,6 +4,8 @@ import SectionA from '../components/Homecomps/SectionA';
 import Header from '../components/Navbar/Header'
 import Aboutme from '../components/Homecomps/Aboutme';
 import DesignPage from '../components/Homecomps/Design/Design';
+import DesignC from '../components/Homecomps/Design/DesignC'
+import Contact from '../components/Homecomps/Contact/Contact'
 
 export const Home = () => {
   const gradientStyle = {
@@ -32,13 +34,13 @@ export const Home = () => {
         <DesignPage />
       </section>
       
-      {/* <section id="services" style={{ padding: '4rem 0' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>My Services</h2>
+      <section id="services" style={{ padding: '4rem 0' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}><DesignC/></h2>
       </section>
       
       <section id="contact" style={{ padding: '4rem 0' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Contact Me</h2>
-      </section> */}
+        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}><Contact/></h2>
+      </section>
     </div>
   );
 };

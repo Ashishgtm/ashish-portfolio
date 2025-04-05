@@ -1,75 +1,180 @@
 .design-container {
+
     width: 100%;
-    padding: 48px 16px;
+    padding: 3rem 1rem;
     background: linear-gradient(to bottom, #00131A 30%, #000D14 60%, #000000 100%);
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin-top: -9%;
   }
   
   .design-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr); /* Force exactly 2 columns */
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .design-card {
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-    padding: 24px;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
     border: 1px solid #333;
     transition: all 0.3s ease;
     cursor: pointer;
     display: flex;
-    flex-direction: column; /* Critical fix */
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 120px;
-    text-align: left;
+    flex-direction: column;
+    min-height: 120px;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%; /* Changed from fixed 600px to 100% */
   }
+  
   
   .design-card:hover {
     border: 1px solid #555;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(161, 159, 159, 0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.6rem 1.2rem rgba(161, 159, 159, 0.2);
   }
   
   .designcard-header {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     display: flex;
-    align-items: center;
+    width: 100%;
+    text-align: left;
   }
   
   .designcard-number {
     color: #aaa;
     font-weight: bold;
-    font-size: 20px;
-    margin-right: 8px;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    text-align: left;
+    flex-shrink: 0; /* Prevent number from shrinking */
   }
   
   .designcard-title {
     color: white;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
   }
-  
   .designcard-description {
     color: #ccc;
+    font-size: 0.9375rem; /* 15px */
     line-height: 1.6;
-    font-size: 15px;
     margin: 0;
-    width: 100%; /* Ensures full width */
+    width: 100%;
+    text-align: left;
+    
+    /* Mobile-first: Show all text by default */
+    overflow: visible;
+    white-space: normal;
+    display: block;
+    max-height: none;
+    
+    /* Line clamping for larger screens */
+    @media (min-width: 769px) {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+      /* Standard property */
+      line-clamp: 3;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      
+      /* Fallback */
+      max-height: 4.8em; /* line-height × 3 lines */
+    }
   }
   
-  @media (max-width: 768px) {
+  
+  .show-more-button {
+    display: block;
+    margin: 2.5rem auto 0;
+    padding: 0.75rem 1.875rem;
+    background-color: transparent;
+    color: #aaa;
+    border: 1px solid #555;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .show-more-button:hover {
+    color: white;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 1024px) {
     .design-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 1.25rem;
     }
     
     .design-card {
-      padding: 20px;
-      min-width: 100%; /* Full width on mobile */
+      padding: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .design-container {
+      padding: 2rem 1rem;
+      margin-top: -35%;
+    }
+    
+    .design-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1rem;
+    }
+    
+    .design-card {
+      min-height: 110px;
+      padding: 1rem;
+    }
+    
+    .designcard-title {
+      font-size: 1.1rem;
+    }
+   
+    
+  }
+  
+  @media (max-width: 480px) {
+    .design-container {
+      padding: 1.5rem 0.75rem;
+      margin-top: -40%;
+
+    }
+    
+    .designcard-header {
+      margin-bottom: 0.75rem;
+    }
+    
+    .designcard-number {
+      font-size: 1.1rem;
+    }
+    
+    .show-more-button {
+      margin: 2rem auto 0;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9375rem;
     }
   }
