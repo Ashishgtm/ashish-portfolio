@@ -74,7 +74,9 @@
     margin-bottom: 1rem;
     transition: var(--transition);
   }
-  
+  .contactclass{
+    margin-top: -8%;
+  }
   
   .info-card:hover .icon-circle {
     background-color: var(--secondary-color);
