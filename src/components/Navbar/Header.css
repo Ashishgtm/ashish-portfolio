@@ -38,6 +38,7 @@
       rgba(0, 19, 26, 0.2) 50%, 
       rgba(0, 0, 0, 0.2) 100%);
   transition: var(--transition);
+  
 }
 
 /* Logo Styles */
@@ -49,6 +50,8 @@
   color: var(--text-color);
   font-size: 1.3rem;
   font-weight: 600;
+  cursor: none;
+
 }
 
 .profile-img {
@@ -58,6 +61,8 @@
   border: 2px solid rgba(255, 255, 255, 0.3);
   object-fit: cover;
   transition: var(--transition);
+  cursor: none;
+
 }
 
 .logo-text {
@@ -94,6 +99,8 @@
   padding: 0.5rem 1rem;
   position: relative;
   transition: var(--transition);
+  cursor: none;
+
 }
 
 .nav-links:hover {
@@ -121,7 +128,6 @@
   display: none;
   background: transparent;
   border: none;
-  cursor: none;
   padding: 0.5rem;
   z-index: 1001;
 }
