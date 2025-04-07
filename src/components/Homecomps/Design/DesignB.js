@@ -72,22 +72,22 @@ const StatsSection = () => {
 
       <div className="stats-metrics-container">
         <div className="stats-metric-card">
-          <div className="metric-value" ref={projectRef} data-target="94">0</div>
+          <div className="metric-value" ref={projectRef} data-target="194">0</div>
           <div className="metric-label">Our Project Complete</div>
         </div>
 
         <div className="stats-metric-card">
-          <div className="metric-value" ref={productRef} data-target="60">0</div>
+          <div className="metric-value" ref={productRef} data-target="160">0</div>
           <div className="metric-label">Our Natural Products</div>
         </div>
 
         <div className="stats-metric-card">
-          <div className="metric-value" ref={reviewRef} data-target="50">0</div>
+          <div className="metric-value" ref={reviewRef} data-target="123">0</div>
           <div className="metric-label">Clients Reviews</div>
         </div>
 
         <div className="stats-metric-card">
-          <div className="metric-value" ref={clientRef} data-target="86">0</div>
+          <div className="metric-value" ref={clientRef} data-target="156">0</div>
           <div className="metric-label">Our Satisfied Clients</div>
         </div>
       </div>
