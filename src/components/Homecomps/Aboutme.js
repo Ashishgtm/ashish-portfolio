@@ -18,7 +18,7 @@ const AboutMe = () => {
         <p className="connect-text">Want to know more about me !</p>
         <div className="connect-buttons">
         <a href="https://www.linkedin.com/in/ashishgautam7/" className="connect-button" target="_blank" rel="noopener noreferrer">
-  LinkedIn
+  Linkedin
 </a>
           <a href="https://github.com/Ashishgtm" className="connect-button" target="_blank" rel="noopener noreferrer">
             Github
