@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,12 @@ const ContactForm = () => {
     email: '',
     subject: '',
     message: ''
+  });
+  
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null }
   });
 
   const handleChange = (e) => {
@@ -20,13 +27,51 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
+    
+    // Replace these with your actual EmailJS service ID, template ID, and user ID
+    const serviceId = 'service_3rb4nvn';
+    const templateId = 'template_k3ypm3b';
+    const userId = 'OLayOSsNp3k1Ws8j3';
+    
+    emailjs.send(serviceId, templateId, formData, userId)
+      .then(response => {
+        console.log('SUCCESS!', response.status, response.text);
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        setStatus({
+          submitted: true,
+          submitting: false,
+          info: { error: false, msg: 'Message sent successfully!' }
+        });
+        
+        // Reset form status after 5 seconds
+        setTimeout(() => {
+          setStatus({
+            submitted: false,
+            submitting: false,
+            info: { error: false, msg: null }
+          });
+        }, 5000);
+      })
+      .catch(error => {
+        console.log('FAILED...', error);
+        setStatus({
+          submitted: false,
+          submitting: false,
+          info: { error: true, msg: 'An error occurred. Please contact ashishgautam9846@gmail.com .' }
+        });
+      });
   };
 
   return (
     <div className="contact-container">
-        <h3 className='contactclass'>Contact</h3>
+      <h3 className='contactclass'>Contact</h3>
       {/* Contact Info Cards */}
       <div className="info-cards">
         <div className="info-card">
@@ -62,8 +107,8 @@ const ContactForm = () => {
               <h4>GET IN TOUCH</h4>
               <h2>Elevate your brand with Me</h2>
               <p>
-              Interested in collaborating? Share your project details, and I’ll 
-              provide tailored solutions to elevate your brand’s digital experience.
+                Interested in collaborating? Share your project details, and I'll 
+                provide tailored solutions to elevate your brand's digital experience.
               </p>
             </div>
           </div>
@@ -116,10 +161,23 @@ const ContactForm = () => {
                 ></textarea>
               </div>
               <div className="form-row">
-                <button type="submit" className="submit-button">
-                  Appointment Now →
+                <button 
+                  type="submit" 
+                  className={`submit-button ${status.submitting ? 'loading' : ''}`}
+                  disabled={status.submitting}
+                >
+                  {status.submitting ? '' : 'Appointment Now →'}
                 </button>
               </div>
+              {status.info.msg && (
+                <div className={`form-message ${status.info.error ? 'error' : 'success'}`} style={{
+                  color: status.info.error ? '#e74c3c' : '#2ecc71',
+                  marginTop: '15px',
+                  textAlign: 'center'
+                }}>
+                  {status.info.msg}
+                </div>
+              )}
             </form>
           </div>
         </div>
