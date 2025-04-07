@@ -121,7 +121,7 @@
   display: none;
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor: none;
   padding: 0.5rem;
   z-index: 1001;
 }
