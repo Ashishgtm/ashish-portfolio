@@ -69,7 +69,7 @@
   transition: var(--transition);
 }
 
-.navbar-logo:hover .logo-text {
+.navbar-logo:hover.logo-text {
   color: var(--primary-color);
 }
 
