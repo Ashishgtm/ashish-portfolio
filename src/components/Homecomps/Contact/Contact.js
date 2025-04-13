@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -29,42 +28,46 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
     
-    // Replace these with your actual EmailJS service ID, template ID, and user ID
-    const serviceId = 'service_3rb4nvn';
-    const templateId = 'template_k3ypm3b';
-    const userId = 'OLayOSsNp3k1Ws8j3';
-    
-    emailjs.send(serviceId, templateId, formData, userId)
+    fetch("https://formspree.io/f/xblgwwrv", { // Replace with your actual endpoint
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
       .then(response => {
-        console.log('SUCCESS!', response.status, response.text);
-        setFormData({
-          name: '',
-          phone: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-        setStatus({
-          submitted: true,
-          submitting: false,
-          info: { error: false, msg: 'Message sent successfully!' }
-        });
-        
-        // Reset form status after 5 seconds
-        setTimeout(() => {
-          setStatus({
-            submitted: false,
-            submitting: false,
-            info: { error: false, msg: null }
+        if (response.ok) {
+          setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            subject: '',
+            message: ''
           });
-        }, 5000);
+          setStatus({
+            submitted: true,
+            submitting: false,
+            info: { error: false, msg: 'Message sent successfully!' }
+          });
+          
+          // Reset form status after 5 seconds
+          setTimeout(() => {
+            setStatus({
+              submitted: false,
+              submitting: false,
+              info: { error: false, msg: null }
+            });
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
       })
       .catch(error => {
         console.log('FAILED...', error);
         setStatus({
           submitted: false,
           submitting: false,
-          info: { error: true, msg: 'An error occurred. Please contact ashishgautam9846@gmail.com .' }
+          info: { error: true, msg: 'An error occurred. Please try again later.' }
         });
       });
   };
