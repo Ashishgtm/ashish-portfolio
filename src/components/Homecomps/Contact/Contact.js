@@ -59,7 +59,7 @@ const ContactForm = () => {
             });
           }, 5000);
         } else {
-          throw new Error('Form submission failed');
+          throw new Error('Please, Try Again Later!!!');
         }
       })
       .catch(error => {
