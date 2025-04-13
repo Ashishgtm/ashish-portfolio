@@ -85,7 +85,7 @@ const FeaturedWebsites = () => {
           </div>
         ))}
       </div>
-      <a href="/" className="all-sites-link">All Sites ➔</a>
+      <a href="https://github.com/Ashishgtm" target="_blank" rel="noopener noreferrer" className="all-sites-link">All Sites ➔</a>
     </div>
   );
 };
