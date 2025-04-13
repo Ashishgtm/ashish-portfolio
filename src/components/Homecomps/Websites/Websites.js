@@ -64,7 +64,9 @@ const FeaturedWebsites = () => {
       description: 'Car Services',
 
       imgSrc: car,
-      liveSiteLink: 'https://carservicesss.netlify.app/'
+      liveSiteLink: 'https://carservicesss.netlify.app/', 
+      
+
     },
   ];
 
@@ -80,7 +82,7 @@ const FeaturedWebsites = () => {
               <img src={website.imgSrc} alt={website.title} />
               <p className='website-description'>{website.description}</p>
 
-              <a href={website.liveSiteLink} className="live-site-link">Live Site</a>
+              <a href={website.liveSiteLink} className="live-site-link"  target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
           </div>
         ))}
