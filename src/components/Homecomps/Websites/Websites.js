@@ -7,6 +7,7 @@ import itsolution from './itsolution.png'
 import portfolio from './portfolio.png'
 import netflix from './netflix.png'
 import car from './car.png'
+import foodboard from './foodboard.png'
 
 const FeaturedWebsites = () => {
   const websites = [
@@ -49,6 +50,14 @@ const FeaturedWebsites = () => {
 
       imgSrc: itsolution,
       liveSiteLink: 'https://itsolutionnepp.netlify.app'
+    },
+    {
+      year: '2022',
+      title: 'Food-Board',
+      description: 'Foodboard Management System',
+
+      imgSrc: foodboard,
+      liveSiteLink: 'https://www.ijraset.com/best-journal/advanced-restaurant-management-system'
     },
     {
       year: '2023',
