@@ -1,88 +1,104 @@
+.featured-websites {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .featured-websites {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-      }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .websites-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.websites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.website-card {
+  background-color: rgba(0, 13, 20, 0.7);   
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  flex: 1 1 20%;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.website-card:hover {
+  border-color:#05D0FF;
+  box-shadow: 0 0 15px #0da2c4, 
+              0 0 30px rgba(0, 136, 255, 0.3);
+  transform: translateY(-10px);
+}
+
+.website-card:hover .website-title {
+  color:  rgba(5, 208, 255, 0.5);
+}
+
+.website-card img {
+  padding-top: 2%;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s ease;
+}
+
+.website-card:hover img {
+  filter: brightness(1.1);
+}
+
+.website-info {
+  padding: 20px;
+}
+
+.website-year {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.589);
+}
+
+.website-title {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.87);
+  transition: color 0.4s ease;
+}
+
+.website-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.589);
+  text-align: center;
+}
+
+.live-site-link {
+  color: rgba(0, 0, 255, 0.774);
+  text-decoration: none;
+  font-size: 12px;
+  cursor: none; /* Changed from none to pointer for better usability */
+}
+
+.all-sites-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #054761;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: none; /* Changed from none to pointer for better usability */
+}
+
+@media (max-width: 768px) {
   .website-card {
-    background-color: rgba(0, 13, 20, 0.7);   
-     border-radius: 10px;
-    overflow: hidden;
-    margin: 10px;
-    flex: 1 1 20%;
-    position: relative;
-    transition: transform 0.3s;
+    flex: 1 1 45%;
   }
-  
-  .website-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .website-card img {
-    padding-top: 2%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .website-info {
-    padding: 20px;
-  }
-  
-  .website-year {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.589);
-   
-  }
-  .website-title{
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.87);
+}
 
+@media (max-width: 480px) {
+  .website-card {
+    flex: 1 1 100%;
   }
-  .website-description{
-font-size: 12px;
-color: rgba(255, 255, 255, 0.589);
-text-align: center;
+}
 
-  }
-  .live-site-link {
-    color: rgba(0, 0, 255, 0.774);
-    text-decoration: none;
-    font-size: 12px;
-    cursor: none;
 
-  }
-  
-  .all-sites-link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #054761;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: none;
-  }
-  
-  @media (max-width: 768px) {
-    
-    .website-card {
-      flex: 1 1 45%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .website-card {
-      flex: 1 1 100%;
-    }
-  }
+
+
+

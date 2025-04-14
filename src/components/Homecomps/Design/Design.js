@@ -1,8 +1,7 @@
 import React from 'react';
 import './Design.css';
-import DesignB from './DesignB'
+import DesignB from './DesignB';
 import FeaturedWebsites from '../Websites/Websites';
-
 
 const ServiceCards = () => {
   const services = [
@@ -14,7 +13,7 @@ const ServiceCards = () => {
       ),
       title: 'Web Design',
       projects: '18 Projects',
-      link:''
+      link: ''
     },
     {
       icon: (
@@ -48,7 +47,7 @@ const ServiceCards = () => {
         </svg>
       ),
       title: 'Web Research',
-      projects: '8 Projects'
+      projects: '08 Projects'
     },
     {
       icon: (
@@ -66,6 +65,11 @@ const ServiceCards = () => {
     <div className="service-container">
       {services.map((service, index) => (
         <div className="service-card" key={index}>
+          {/* Add particle elements for floating animation */}
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          
           <div className="icon-container">
             {service.icon}
           </div>
@@ -77,10 +81,8 @@ const ServiceCards = () => {
         </div>
       ))}
 
-      <DesignB/>
-      <FeaturedWebsites/>
-      
-
+      <DesignB />
+      <FeaturedWebsites />
     </div>
   );
 };
