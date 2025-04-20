@@ -29,8 +29,8 @@ const ServiceCards = () => {
           <path d="M20 5v10"></path>
         </svg>
       ),
-      title: 'Ui/Ux Design',
-      projects: '07 Projects'
+      title: 'Responsive Design',
+      projects: '18 Projects'
     },
     {
       icon: (
@@ -46,8 +46,8 @@ const ServiceCards = () => {
           <path d="m19.167 4.833 1.416-1.416"></path>
         </svg>
       ),
-      title: 'Web Research',
-      projects: '08 Projects'
+      title: 'Website Redesign',
+      projects: '11 Projects' 
     },
     {
       icon: (
@@ -56,8 +56,8 @@ const ServiceCards = () => {
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
       ),
-      title: 'Marketing',
-      projects: '90 Product'
+      title: 'Website Maintenance',
+      projects: '13 Projects'
     }
   ];
 

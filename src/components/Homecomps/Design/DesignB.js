@@ -114,7 +114,7 @@ const StatsSection = () => {
           <div className="particle"></div>
           
           <div className="metric-value" ref={projectRef} data-target="28">0</div>
-          <div className="metric-label">Our Project Complete</div>
+          <div className="metric-label"> Project Completed</div>
         </div>
 
         <div className="stats-metric-card" ref={addToMetricCardsRef}>
@@ -123,7 +123,7 @@ const StatsSection = () => {
           <div className="particle"></div>
           
           <div className="metric-value" ref={productRef} data-target="18">0</div>
-          <div className="metric-label">Our Natural Products</div>
+          <div className="metric-label">Natural Products</div>
         </div>
 
         <div className="stats-metric-card" ref={addToMetricCardsRef}>
@@ -141,7 +141,7 @@ const StatsSection = () => {
           <div className="particle"></div>
           
           <div className="metric-value" ref={clientRef} data-target="28">0</div>
-          <div className="metric-label">Our Satisfied Clients</div>
+          <div className="metric-label">Satisfied Clients</div>
         </div>
       </div>
     </div>
