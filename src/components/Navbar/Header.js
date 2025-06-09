@@ -38,7 +38,7 @@ const Navbar = () => {
             alt="Profile"
             className="profile-img"
           />
-          <span className="logo-text">Ashish Gtm</span>
+          <span className="logo-text">Ashish</span>
         </a>
         
         <div className="menu-icon" onClick={toggleMenu}>
