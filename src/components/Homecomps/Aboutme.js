@@ -13,7 +13,7 @@ const AboutMe = () => {
           visually appealing and user-friendly interfaces, combining technical
           expertise with a keen eye for design. I love crafting designs that
           blend creativity and functionality, always staying updated with the
-          latest trends and technologies.
+          latest trends and technologies. hello
         </p>
         <p className="connect-text">Want to know more about me !</p>
         <div className="connect-buttons">
