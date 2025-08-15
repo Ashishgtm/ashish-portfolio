@@ -82,7 +82,7 @@ const ContactForm = () => {
             <i className="location-icon">📍</i>
           </div>
           <h3>Address</h3>
-          <p>Satdobato, Lalitpur, Nepal</p>
+          <p>East Ham, London, United Kingdom</p>
         </div>
 
         <div className="info-card">
@@ -98,7 +98,7 @@ const ContactForm = () => {
             <i className="phone-icon">📞</i>
           </div>
           <h3>Call Me</h3>
-          <p>+44-07349649285</p>
+          <p>+44-7349649285</p>
         </div>
       </div>
 
