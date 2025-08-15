@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import Ashish from './Ashish.jpg';
+import Ashish from './Ashishgtm.jpg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
