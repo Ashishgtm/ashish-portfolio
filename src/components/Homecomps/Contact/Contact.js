@@ -98,7 +98,7 @@ const ContactForm = () => {
             <i className="phone-icon">📞</i>
           </div>
           <h3>Call Me</h3>
-          <p>+977-9846911943</p>
+          <p>+44-07349649285</p>
         </div>
       </div>
 
