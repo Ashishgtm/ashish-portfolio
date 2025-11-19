@@ -82,7 +82,7 @@ const ContactForm = () => {
             <i className="location-icon">📍</i>
           </div>
           <h3>Address</h3>
-          <p>East Ham, London, United Kingdom</p>
+          <p>London, United Kingdom</p>
         </div>
 
         <div className="info-card">
