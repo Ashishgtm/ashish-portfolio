@@ -45,7 +45,7 @@ const PricingPage = () => {
         
         <div className="pricing-card featured">
           <div className="pricing-card-header">
-            <h6>Basic</h6>
+            <h6>Premium</h6>
             <div className="pricing-amount">
               <span className="dollar-sign">$</span>
               <span className="price">199.99</span>
@@ -83,7 +83,7 @@ const PricingPage = () => {
         
         <div className="pricing-card">
           <div className="pricing-card-header">
-            <h6>Premium</h6>
+            <h6>Basic</h6>
             <div className="pricing-amount">
               <span className="dollar-sign">$</span>
               <span className="price">29.99</span>
