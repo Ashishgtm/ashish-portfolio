@@ -29,6 +29,7 @@ const Navbar = () => {
     setIsMenuOpen(false); // Close mobile menu after clicking
   };
 
+  
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">

@@ -29,7 +29,7 @@ const FeaturedWebsites = () => {
     },
     {
       year: '2020',
-      title: 'Ecommerce',
+      title: 'Redhunt',
       description: 'Shopping',
 
       imgSrc: redhunt,
