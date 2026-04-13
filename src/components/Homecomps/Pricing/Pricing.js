@@ -15,7 +15,7 @@ const PricingPage = () => {
             <h6>Starter</h6>
             <div className="pricing-amount">
               <span className="dollar-sign">$</span>
-              <span className="price">4.99</span>
+              <span className="price">7.99</span>
             </div>
             <p className="per-month">Per Month</p>
           </div>
@@ -48,7 +48,7 @@ const PricingPage = () => {
             <h6>Premium</h6>
             <div className="pricing-amount">
               <span className="dollar-sign">$</span>
-              <span className="price">199.99</span>
+              <span className="price">99.99</span>
             </div>
             <p className="per-month">Per Month</p>
           </div>
